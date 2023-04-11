@@ -52,6 +52,7 @@ const observer = new IntersectionObserver(entries => {
         }
       } catch ({ message }) {
         Notify.info(message);
+        galleryListEl = '';
       }
     }
   });
@@ -93,6 +94,7 @@ const handleSearchFormSubmit = async event => {
     lightboxRef = new SimpleLightbox('.gallery a');
   } catch ({ message }) {
     Notify.failure(message);
+    galleryListEl = '';
   }
 };
 
